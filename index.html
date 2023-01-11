@@ -1,543 +1,947 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="ini adalah CV Muhammad Faruq Noor Afiyf" />
-  <meta name="author" content="mfaruqna" />
-  <title>CV Muhammad Faruq</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Offcanvas navbar template · Bootstrap v5.0</title>
 
-  <!-- Font Awesome icons (free version)-->
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
 
-  <!-- Custom fonts for this template-->
-  <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="css/styles.css" rel="stylesheet" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/v4-font-face.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/v4-shims.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/v5-font-face.min.css">
 
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/offcanvas.css" rel="stylesheet">
 </head>
 
-<body id="page-top">
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Muhammad Faruq</span>
-      <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-          src="assets/img/faruq_jas.jpg" alt="Muhammad Faruq" title="Muhammad Faruq" /></span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#project">project</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-      </ul>
+<body class="bg-light" id="page-top">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation" id="navbarTop">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#profile">Muhammad Faruq</a>
+            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <!-- <a class="nav-link active" aria-current="page" href="#experience">Experience</a> -->
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="nav-scroller bg-body shadow-sm" id="profile">
+        <nav class="nav nav-underline" aria-label="Secondary navigation">
+            <a class="nav-link" href="#annisaa-collection">Annisaa Collection</a>
+            <a class="nav-link" href="#online-shop-laravel">Online Shop Laravel</a>
+            <a class="nav-link" href="#dompet-digital">Dompet Digital</a>
+            <a class="nav-link" href="#raja-cepat">Raja Cepat</a>
+            <a class="nav-link" href="#aplikasi-pemesanan">Aplikasi Pemesanan</a>
+            <a class="nav-link" href="#aplikasi-booking-studio">Aplikasi Booking Studio</a>
+        </nav>
     </div>
-  </nav>
-  <!-- Page Content-->
-  <div class="container-fluid p-0">
-    <!-- About-->
-    <section class="resume-section" id="about">
-      <div class="resume-section-content">
-        <h1 class="mb-0">
-          Muhammad Faruq
-          <span class="text-primary">Noor Afiyf</span>
-        </h1>
-        <div class="subheading mb-5">
-          Ujung Harapan Jl. Abadi Raya No. 26 Bekasi&ensp;-&ensp;Umur 26&ensp;-&ensp;(62) 897-1793-630
-          <a class="text-decoration-none text-muted" href="https://api.whatsapp.com/send/?phone=628971793630"
-            target="_blank"><i class="fab fa-whatsapp"></i></a>
-          /
-          <a class="text-decoration-none text-muted" href="tel:+628971793630"><i class="fas fa-mobile-alt"></i></a>
-          &ensp;-&ensp;
-          <a class="text-decoration-none text-muted"
-            href="mailto:muhammadfaruq.tkj1@gmail.com">muhammadfaruq.tkj1@gmail.com</a>
-        </div>
-        <p class="lead mb-5">
-          &emsp;
-          Halo saya Faruq, saya
-          terbiasa menggunakan bahasa pemrograman
-          <a class="text-decoration-none text-muted" href="https://www.php.net/" target="_blank">PHP</a>
-          dengan framework
-          <a class="text-decoration-none text-muted" href="https://codeigniter.com" target="_blank">CodeIgniter</a>
-          dan
-          <a class="text-decoration-none text-muted" href="https://laravel.com" target="_blank">Laravel</a>
-          serta library lainnya seperti
-          <a class="text-decoration-none text-muted" href="https://jquery.com/" target="_blank">jQuery JavaScript</a>,
-          <a class="text-decoration-none text-muted" href="https://fontawesome.com" target="_blank">Font Awesome</a>
-          dan
-          <a class="text-decoration-none text-muted" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>.
-          Saat ini saya sedang kuliah semester 8 di
-          <a class="text-decoration-none text-muted" href="https://jayakarta.ac.id/" target="_blank">STMIK Jayakarta
-          </a>
-          dengan program studi Teknik Infromatika.
-          <br />
-          &emsp;
-          Saya sedang mendalami bahasa pemrograman PHP dengan framework CodeIgniter dan Laravel, saya cukup sering
-          mengikuti webinar dengan tema Programming, IT Knowledge, dan webinar lainnya untuk menambah wawasan serta
-          skill. Saya suka belajar hal baru ataupun memperdalam skill yang cukup saya kuasai. Saat ini saya sedang dalam
-          proses pembuatan aplikasi berbasis web menggunakan framework CodeIgniter yaitu LearningOnline, pada aplikasi
-          tersebut ada materi training, video tutorial, dan assessment untuk penilaian peserta.
-        </p>
-        <div class="social-icons">
-          <a class="social-icon" href="https://www.linkedin.com/in/mfaruqna" target="_blank"><i
-              class="fab fa-linkedin-in"></i></a>
-          <a class="social-icon" href="https://github.com/mfaruq96" target="_blank"><i class="fab fa-github"></i></a>
-          <a class="social-icon" href="https://www.instagram.com/muhammadfaruq4268/" target="_blank"><i
-              class="fab fa-instagram"></i></a>
-          <a class="social-icon" href="https://www.facebook.com/muhammadfaruqnoorafiyf" target="_blank"><i
-              class="fab fa-facebook-f"></i></a>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0" />
-    <!-- Experience-->
-    <section class="resume-section" id="experience">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Experience</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">PT. Penerbit Erlangga</h3>
-            <div class="subheading mb-3">Web Developer</div>
-            <p>
-              - Membuat aplikasi berbasis website menggunakan framework Vue JS
-              <br />
-              - Melakukan problem solving jika terjadi bug pada aplikasi
-              <br />
-              - Menambahkan fitur aplikasi dan update fitur aplikasi
-              <br />
-              - Mengintegrasikan database dengan API
-              <br />
-              - Melakukan laporan harian dan laporan bulanan
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">October 2022 - Present</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">PT. Intikom Berlian Mustika</h3>
-            <div class="subheading mb-3">Resource Development</div>
-            <p>
-              - Manage Training
-              <br />
-              - Documentation Training
-              <br />
-              - Reporting Training
-              <br />
-              - Create Content Knowledge Base
-              <br />
-              - Troubleshooting Technician Guide
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">February 2021 - October 2022</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-          <div class="flex-grow-1">
-            <!-- <h3 class="mb-0">PT. Intikom Berlian Mustika</h3> -->
-            <div class="subheading mb-3">Project Technician</div>
-            <p>
-              - Implementation Project
-              <br />
-              - Corrective Maintenance & Preventive Maintenance
-              <br />
-              - Create a Guide Project
-              <br />
-              - Reporting Project
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">January 2019 - January 2021</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <!-- <h3 class="mb-0">PT. Intikom Berlian Mustika</h3> -->
-            <div class="subheading mb-3">Project Technician & Team Leader - Freelance</div>
-            <p>
-              - Implementation Project
-              <br />
-              - Troubleshooting & Guide User
-              <br />
-              - Manage Progress Project
-              <br />
-              - Reporting Project
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">October 2018 - December 2018</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">PT. Astra Graphia Tbk</h3>
-            <div class="subheading mb-3">Engineer Deployment Support</div>
-            <p>
-              - Implementation Project
-              <br />
-              - Troubleshooting & Guide User
-              <br />
-              - Reporting Project
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">February 2017 - September 2017</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr class="m-0" />
 
-    <!-- Project-->
-    <section class="resume-section" id="project">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Project</h2>
+    <main class="container">
 
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Annisaa Collection</h3>
-            <div class="subheading mb-3">Full Stack Developer</div>
-            <p>
-              Aplikasi berbasis web menggunakan bahasa program PHP dengan framework CodeIgniter serta jQuery JavaScript,
-              AJAX, Font Awesome dan Bootstrap
-              <br /><br />
-              - Fitur : <br />
-              -- Register, Login, Forgot Password <br />
-              -- Login as Guest <br />
-              -- Profile, Edit Profile dan Change Password <br />
-              -- Product Management <br />
-              -- Shopping Cart <br />
-              -- Transaction History <br />
-              -- Transaction Report <br />
-              <br />Account :
-              <br />- Admin :
-              <br />-- username : annisaa@gmail.com
-              <br />-- password : 1sampai10
-              <br />
-              <br />- Member :
-              <br />-- username : faruq@gmail.com
-              <br />-- password : 0987654321
-              <br /><br />
-              <a href="https://annisaacollection.000webhostapp.com/home" target="_blank"
-                class="btn btn-sm btn-primary text-white">
-                Demo Aplikasi
-              </a>
-              <a href="https://youtu.be/qBRde-5cMzA" target="_blank" class="btn btn-sm btn-primary text-white">
-                Video Demo Aplikasi
-              </a>
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <!-- <span class="text-primary">Augustus 2021</span> -->
-          </div>
+        <div class="card border-0 m-2 bg-transparent">
+            <div class="card-body"></div>
         </div>
 
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Online Shop Laravel</h3>
-            <div class="subheading mb-3">Full Stack Developer</div>
-            <p>
-              Aplikasi berbasis web menggunakan bahasa program PHP dengan framework Laravel serta Font Awesome dan
-              Bootstrap
-              <br /><br />
-              - Fitur : <br />
-              -- Register, Login <br />
-              -- Profile, Edit Profile dan Change Password <br />
-              -- Shopping Cart <br />
-              -- Transaction History <br />
-              -- Transaction Report <br />
-              <br />Tidak bisa demo aplikasi karena aplikasi web ini belum saya upload ke hosting
-              <br />
-              <br />
-              <a href="https://youtu.be/lwon1WdQUTQ" target="_blank" class="btn btn-sm btn-primary text-white">
-                Video Demo Aplikasi
-              </a>
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <!-- <span class="text-primary">Augustus 2021</span> -->
-          </div>
+        <!-- profile -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 text-center mb-2">
+                        <img src="./assets/img/faruq_jas.jpg" class="img-thumbnail rounded-circle" width="50%" alt="">
+                    </div>
+                    <div class="col-lg-6 mb-2">
+                        <h2>Muhammad Faruq Noor Afiyf</h2>
+                        <a href="tel:+628971793630" class="div-a-decoration">
+                            <h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-phone"></i>
+                                </button>
+                                0897 1793 630
+                            </h5>
+                        </a>
+                        <a href="mailto:muhammadfaruq.tkj1@gmail.com" class="div-a-decoration">
+                            <h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </button>
+                                muhammadfaruq.tkj1@gmail.com
+                            </h5>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mfaruqna/" target="_blank" class="div-a-decoration">
+                            <h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </button>
+                                www.linkedin.com/in/mfaruqna
+                            </h5>
+                        </a>
+                        <a href="https://github.com/mfaruq96" target="_blank" class="div-a-decoration">
+                            <h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa-brands fa-github"></i>
+                                </button>
+                                www.github.com/mfaruq96
+                            </h5>
+                        </a>
+                        <a href="#" class="div-a-decoration">
+                            <h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-globe"></i>
+                                </button>
+                                Bekasi, Indonesia
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+                <p class="div-font-size-18" data-aos="fade-up" data-aos-duration="1500">&emsp;
+                    Halo saya Faruq, saya Mahasiswa aktif di STMIK Jayakarta semester 8 dengan program studi Teknik
+                    Informatika. Pengalaman kerja sebagai IT Support 4 Tahun dengan beberapa project diantaranya PC
+                    Refreshment di Bank Permata, Deployment PC/Notebook Bank Danamon Indonesia dan IT Trainer &
+                    Facilitator Training di PT Intikom Berlian Mustika. Saya cukup sering mengikuti webinar dengan tema
+                    Programming, IT Knowledge, dan webinar lainnya untuk menambah wawasan, jaringan serta skill.
+                </p>
+            </div>
+        </div>
+        <!-- end profile -->
+
+        <div class="card border-0 m-4 bg-transparent" id="experience">
+            <div class="card-body">
+                <hr>
+            </div>
         </div>
 
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">CustMark Twelve 4.0</h3>
-            <div class="subheading mb-3">Full Stack Developer</div>
-            <p>
-              Aplikasi berbasis android menggunakan bahasa program PHP dengan framework Laravel serta Font Awesome dan
-              Bootstrap
-              <br /><br />
-              - Fitur : <br />
-              -- Menggunakan API untuk location <br />
-              -- Melihat Detail Lokasi Customer <br />
-              -- Naviagsi Untuk Menuju Lokasi Customer <br />
-              -- Bantuan Penggunaan Aplikasi <br />
-              <br />Silahkan download source apk untuk demo aplikasi, dan klik video demo aplikasi untuk melihat demo
-              aplikasi
-              <br />
-              <br />
-              <a href="https://drive.google.com/file/d/15pZvhJxItMSjgh22o5gqMgS7XA_JwmPE/view?usp=sharing"
-                target="_blank" class="btn btn-sm btn-primary text-white">
-                Source APK
-              </a>
-              <a href="https://youtu.be/tKj94slnZqc" target="_blank" class="btn btn-sm btn-primary text-white">
-                Video Demo Aplikasi
-              </a>
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <!-- <span class="text-primary">Augustus 2021</span> -->
-          </div>
+        <!-- experience -->
+        <h1 class="mb-5 text-center" data-aos="fade-up" data-aos-duration="1500">EXPERIENCE</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        PT INTIKOM BERLIAN MUSTIKA
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Resource Development
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        February 2021 - October 2022
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Membuat timeplan training dan laporan training teknisi</li>
+                        <li>Membuat materi training, panduan training dalam bentuk PDF & Video tutorial</li>
+                        <li>Training teknisi baru dan refreshment skill teknisi lama</li>
+                        <li>Guide teknisi dalam melakukan troubleshooting by call & video call</li>
+                        <li>Membuat laporan harian dan laporan bulanan</li>
+                        <li>Documentation Training</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        PT INTIKOM BERLIAN MUSTIKA
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Project Technician
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        January 2019 - January 2021
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Instalasi hardware & software PC/Laptop serta konfigurasi PC/Laptop</li>
+                        <li>Team leader project, administrasi project dan teknisi project</li>
+                        <li>Guide teknisi dalam melakukan troubleshooting by call & video call</li>
+                        <li>Problem solving project hardware & software</li>
+                        <li>Membuat laporan harian dan laporan bulanan</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        PT ASTRAGRAPHIA
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Engineer Deployment Support
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        February 2017 - September 2017
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Instalasi hardware & software PC/Laptop serta konfigurasi PC/Laptop</li>
+                        <li>Guide teknisi dalam melakukan troubleshooting by call & video call</li>
+                        <li>Problem solving project hardware & software</li>
+                        <li>Membuat laporan harian dan laporan bulanan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end experience -->
+
+        <div class="card border-0 m-4 bg-transparent" id="projects">
+            <div class="card-body">
+                <hr>
+            </div>
         </div>
 
-      </div>
-    </section>
-    <hr class="m-0" />
-
-    <!-- Education-->
-    <section class="resume-section" id="education">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Education</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">STMIK Jayakarta</h3>
-            <div class="subheading mb-3">Strata-1</div>
-            <div>Teknik Informatika</div>
-            <!-- <p>GPA: 3.24</p> -->
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">February 2019 - Present</span>
-          </div>
+        <h1 class="mb-5 text-center" data-aos="fade-up" data-aos-duration="1500">PROJECTS</h1>
+        <!-- project 1 -->
+        <div class="row" id="annisaa-collection">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        ANNISAA COLLECTION
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Fullstack Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject1" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject1" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project1/cover-annisaa-1.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project1/cover-annisaa-2.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project1/cover-annisaa-3.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>PHP</li>
+                        <li>CodeIgniter</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="https://youtu.be/qBRde-5cMzA" target="_blank"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo Aplikasi</a>
+                </div>
+            </div>
         </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">SMK Taman Harapan</h3>
-            <div class="subheading mb-3">High School</div>
-            <div>Teknik Komputer & Jaringan</div>
-            <!-- <p>GPA: 3.02</p> -->
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">June 2010 - May 2013</span>
-          </div>
+        <!-- end project 1 -->
+
+        <!-- project 2 -->
+        <div class="row" id="online-shop-laravel">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        ONLINE SHOP LARAVEL
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Fullstack Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject2" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject2" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project2/cover-olshop-laravel1.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project2/cover-olshop-laravel2.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project2/cover-olshop-laravel3.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject2"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject2"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="https://youtu.be/lwon1WdQUTQ" target="_blank"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo Aplikasi</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <hr class="m-0" />
-    <!-- Skills-->
-    <section class="resume-section" id="skills">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Skills</h2>
-        <div class="subheading mb-3">Programming Languages & Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item"><a href="https://www.w3schools.com/html/" target="_blank"><i
-                class="fab fa-html5"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.w3schools.com/css/" target="_blank"><i
-                class="fab fa-css3-alt"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.jquery.com" target="_blank"><i
-                class="fab fa-js-square"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.getbootstrap.com" target="_blank"><i
-                class="fab fa-bootstrap"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.php.net" target="_blank"><i class="fab fa-php"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.codeigniter.com/" target="_blank"><i
-                class="fab fa-free-code-camp"></i></a></li>
-          <li class="list-inline-item"><a href="https://www.laravel.com/" target="_blank"><i
-                class="fab fa-laravel"></i></a></li>
-        </ul>
-        <!-- <div class="subheading mb-3">Workflow</div> -->
-        <ul class="fa-ul mb-0">
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            HTML
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://www.w3schools.com/html/"
-                >9/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            CSS
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://www.w3schools.com/css/"
-                >8.5/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Jquery Javascript
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://www.w3schools.com/jquery/"
-                >8/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Bootstrap
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://www.w3schools.com/bootstrap /"
-                >8/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            PHP
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://www.w3schools.com/php/"
-                >8/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Codeignaiter 3
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://codeigniter.com/userguide3/index.html"
-                >7.8/10</a
-              > -->
-          </li>
-          <li>
-            <span class="fa-li"><i class="fas fa-check"></i></span>
-            Laravel
-            <!-- <a
-                class="text-decoration-none text-muted"
-                href="https://laravel.com/docs/8.x/"
-                >7/10</a
-              > -->
-          </li>
-        </ul>
-      </div>
-    </section>
+        <!-- end project 2 -->
 
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br>
-
-    <hr class="m-0" />
-    <!-- Interests-->
-    <!-- <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Interests</h2>
-          <p>
-            Apart from being a web developer, I enjoy most of my time being
-            outdoors. In the winter, I am an avid skier and novice ice climber.
-            During the warmer months here in Colorado, I enjoy mountain biking,
-            free climbing, and kayaking.
-          </p>
-          <p class="mb-0">
-            When forced indoors, I follow a number of sci-fi and fantasy genre
-            movies and television shows, I am an aspiring chef, and I spend a
-            large amount of my free time exploring the latest technology
-            advancements in the front-end web development world.
-          </p>
+        <!-- project 3 -->
+        <div class="row" id="dompet-digital">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        DOMPET DIGITAL
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Fullstack Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject3" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject3" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project3/cover-ewallet1.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project3/cover-ewallet2.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project3/cover-ewallet3.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject3"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject3"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>PHP</li>
+                        <li>CodeIgniter</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="https://dompet-digital.000webhostapp.com/" target="_blank"
+                        class="btn btn-sm btn-outline-primary mt-3">Demo
+                        Aplikasi</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalComingSoon"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo Aplikasi</a>
+                </div>
+            </div>
         </div>
-      </section> -->
-    <hr class="m-0" />
-    <!-- Awards-->
-    <!-- <section class="resume-section" id="awards">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Awards & Certifications</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              Google Analytics Certified Developer
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              Mobile Web Specialist - Google Certification
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              1
-              <sup>st</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition
-              2009
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              1
-              <sup>st</sup>
-              Place - University of Colorado Boulder - Adobe Creative Jam 2008
-              (UI Design Category)
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              2
-              <sup>nd</sup>
-              Place - University of Colorado Boulder - Emerging Tech Competition
-              2008
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              1
-              <sup>st</sup>
-              Place - James Buchanan High School - Hackathon 2006
-            </li>
-            <li>
-              <span class="fa-li"
-                ><i class="fas fa-trophy text-warning"></i
-              ></span>
-              3
-              <sup>rd</sup>
-              Place - James Buchanan High School - Hackathon 2005
-            </li>
-          </ul>
+        <!-- end project 3 -->
 
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br>
-
+        <!-- project 4 -->
+        <div class="row" id="raja-cepat">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        RAJA CEPAT
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        FrontEnd Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject4" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject4" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project4/cover-race1.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project4/cover-race2.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project4/cover-race3.jpg" class="d-block w-100"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject4"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject4"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Javascript</li>
+                        <li>Vue JS</li>
+                        <li>Integration API</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="https://race-with-vue.vercel.app/" target="_blank"
+                        class="btn btn-sm btn-outline-primary mt-3">Demo
+                        Aplikasi</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalComingSoon"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo Aplikasi</a>
+                </div>
+            </div>
         </div>
-      </section> -->
-  </div>
+        <!-- end project 4 -->
 
-  <!-- Bootstrap core JS-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- project 5 -->
+        <div class="row" id="aplikasi-pemesanan">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        APLIKASI PEMESANAN
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Fullstack Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject5" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject5" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project5/cover-aplikasi-pemesanan1.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project5/cover-aplikasi-pemesanan2.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project5/cover-aplikasi-pemesanan3.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject5"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject5"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>PHP</li>
+                        <li>CodeIgniter</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="https://faruqweb.000webhostapp.com/home" target="_blank"
+                        class="btn btn-sm btn-outline-primary mt-3">Demo
+                        Aplikasi</a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalComingSoon"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo Aplikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- end project 5 -->
 
-  <!-- Core theme JS-->
-  <script src="js/scripts.js"></script>
+        <!-- project 6 -->
+        <div class="row" id="aplikasi-booking-studio">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        APLIKASI BOOKING STUDIO
+                    </p>
+                    <p class="div-font-size-24 text-primary m-0">
+                        Fullstack Developer
+                    </p>
+                    <div class="row container my-3">
+                        <div class="col-lg-12">
+                            <div id="carouselProject6" class="carousel slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselProject6" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselProject6" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselProject6" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/img/project6/cover-aplikasi-booking1.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project6/cover-aplikasi-booking2.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/img/project6/cover-aplikasi-booking3.jpg"
+                                            class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject6"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProject6"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="div-font-size-18 m-0">
+                        Description :
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>PHP</li>
+                        <li>CodeIgniter</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap</li>
+                        <li>Font Awesome</li>
+                        <li>DataTables</li>
+                    </ul>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalComingSoon"
+                        class="btn btn-sm btn-outline-primary mt-3">Video Demo
+                        Aplikasi</a>
+                </div>
+            </div>
+        </div>
+        <!-- end project 6 -->
+
+        <div class="card border-0 m-4 bg-transparent" id="certificates">
+            <div class="card-body">
+                <hr>
+            </div>
+        </div>
+
+        <!-- certificates -->
+        <h1 class="mb-5 text-center" data-aos="fade-up" data-aos-duration="1500">CERTIFICATES</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        Bootcamp Front-End Developer Mastering Vue JS 3
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        December 2022
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Instalation Vue JS</li>
+                        <li>Fundamentals Vue JS</li>
+                        <li>Pinia State Management</li>
+                        <li>Integration API</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        FrontEnd Javascript Wave 2
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        February 2022 - July 2022
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Learn HTML, CSS & Javascript</li>
+                        <li>Instalation React JS</li>
+                        <li>Fundamentals React JS</li>
+                        <li>Redux State Management</li>
+                        <li>Integration API</li>
+                        <li>Deployment</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        Belajar Membuat Front-End Web Untuk Pemula
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        April 2022
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Basic Javascript</li>
+                        <li>Browser Object and DOM Manipulation</li>
+                        <li>Web Storage</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        Soft Skill by Lenovo (Self Learning)
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        November 2021
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Communication skill</li>
+                        <li>Negotiation skill</li>
+                        <li>Prioritization of Tasks</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+                <div class="mb-5" data-aos="fade-up" data-aos-duration="1500">
+                    <p class="div-font-size-28 m-0">
+                        Basic Training New Technician by Intikom
+                    </p>
+                    <p class="div-font-size-22 text-secondary m-0">
+                        January 2019
+                    </p>
+                    <ul class="div-font-size-18">
+                        <li>Computer Hardware</li>
+                        <li>Printer Laserjet</li>
+                        <li>Printer Passbook</li>
+                        <li>GPS</li>
+                        <li>UPS</li>
+                        <li>etc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end certificates -->
+
+        <div class="card border-0 m-4 bg-transparent" id="education">
+            <div class="card-body">
+                <hr>
+            </div>
+        </div>
+
+        <!-- education -->
+        <h1 class="mb-5 text-center" data-aos="fade-up" data-aos-duration="1500">EDUCATION</h1>
+        <div class="row">
+            <div class="col-lg-6 mb-2" data-aos="fade-up-right" data-aos-duration="1500">
+                <div class="card rounded-circle text-center shadow">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="div-font-size-28 m-0">
+                                STMIK JAYAKARTA
+                            </p>
+                            <p class="div-font-size-24 text-primary m-0">
+                                S1 Teknik Informatika
+                            </p>
+                            <p class="div-font-size-22 text-secondary m-0">
+                                February 2019 - Present
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-2" data-aos="fade-up-left" data-aos-duration="1500">
+                <div class="card rounded-circle text-center shadow">
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <p class="div-font-size-28 m-0">
+                                SMK TAMAN HARAPAN
+                            </p>
+                            <p class="div-font-size-24 text-primary m-0">
+                                Teknik Komputer Jaringan
+                            </p>
+                            <p class="div-font-size-22 text-secondary m-0">
+                                June 2010 - May 2013
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end education -->
+
+        <div class="card border-0 m-4 bg-transparent" id="skills">
+            <div class="card-body">
+                <hr>
+            </div>
+        </div>
+
+        <!-- skills -->
+        <h1 class="mb-5 text-center" data-aos="fade-up" data-aos-duration="1500">SKILLS</h1>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+                    <img src="./assets/img/icons/html.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="HTML" title="HTML">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+                    <img src="./assets/img/icons/css.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="CSS" title="CSS">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://www.javascript.com/" target="_blank">
+                    <img src="./assets/img/icons/javascript.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="JavaScript" title="Javascript">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://www.php.net/" target="_blank">
+                    <img src="./assets/img/icons/php.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="PHP" title="PHP">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://getbootstrap.com/" target="_blank">
+                    <img src="./assets/img/icons/bootstrap.jpg" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="Bootstrap" title="Bootstrap">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://codeigniter.com/" target="_blank">
+                    <img src="./assets/img/icons/codeigniter.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="CodeIgniter" title="CodeIgniter">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://laravel.com/" target="_blank">
+                    <img src="./assets/img/icons/laravel.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="Laravel" title="Laravel">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="http://vuejs.org/" target="_blank">
+                    <img src="./assets/img/icons/vuejs.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="Vue JS" title="Vue JS">
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mb-3" data-aos="flip-left" data-aos-duration="1500">
+                <a href="https://reactjs.org/" target="_blank">
+                    <img src="./assets/img/icons/reactjs.png" class="img-rounded img-thumbnail div-img-icon shadow"
+                        alt="React JS" title="React JS">
+                </a>
+            </div>
+        </div>
+        <!-- end skills -->
+
+        <!-- fixed bottom -->
+        <div class="fixed-bottom d-flex flex-row-reverse">
+            <div class="p-2">
+                <a class="rounded text-light" href="#page-top">
+                    <i class="fa-solid fa-angle-up fa-2x rounded bg-dark shadow p-2 div-button-up"></i>
+                </a>
+            </div>
+            <div class="p-2">
+                <a class="rounded text-light" href="https://api.whatsapp.com/send/?phone=628971793630" target="_blank">
+                    <i class="fa-brands fa-whatsapp fa-2x rounded bg-success shadow p-2 div-button-up"></i>
+                </a>
+            </div>
+        </div>
+        <!-- end fixed bottom -->
+
+    </main>
+
+    <!-- footer -->
+    <div class="row text-center bg-dark text-white p-4 mt-5">
+        <div class="col-lg-12">
+            <span class="">
+                Copyright &copy; Muhammad Faruq 2023
+            </span>
+        </div>
+    </div>
+    <!-- end footer -->
+
+    <!-- modal coming soon -->
+    <div class="modal fade" id="modalComingSoon" tabindex="-1" aria-labelledby="modalComingSoonLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalComingSoonLabel">Announcement</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Coming Soon..
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal coming soon -->
+
+    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/offcanvas.js"></script>
+
+    <!-- font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/brands.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/conflict-detection.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/fontawesome.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/regular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/solid.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/v4-shims.min.js"></script>
+
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const myCarouselProject1 = document.querySelector('#carouselProject1');
+        const carousel1 = new bootstrap.Carousel(myCarouselProject1, {
+            interval: 2000,
+        });
+
+        const myCarouselProject2 = document.querySelector('#carouselProject2');
+        const carousel2 = new bootstrap.Carousel(myCarouselProject2, {
+            interval: 2000,
+        });
+
+        const myCarouselProject3 = document.querySelector('#carouselProject3');
+        const carousel3 = new bootstrap.Carousel(myCarouselProject3, {
+            interval: 2000,
+        });
+
+        const myCarouselProject4 = document.querySelector('#carouselProject4');
+        const carousel4 = new bootstrap.Carousel(myCarouselProject4, {
+            interval: 2000,
+        });
+
+        const myCarouselProject5 = document.querySelector('#carouselProject5');
+        const carousel5 = new bootstrap.Carousel(myCarouselProject5, {
+            interval: 2000,
+        });
+
+        const myCarouselProject6 = document.querySelector('#carouselProject6');
+        const carousel6 = new bootstrap.Carousel(myCarouselProject6, {
+            interval: 2000,
+        });
+    </script>
 
 </body>
 
